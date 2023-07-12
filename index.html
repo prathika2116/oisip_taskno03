@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Temperature Converter</title>
+  <style>
+    /* Add some basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #con{
+        display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      background-image:url(108053.jpg) ;
+      width:100%;
+      height: 100vh;
+
+    }
+    .small{
+        width: 450px;
+        height: 450px;
+        background-color: rgb(139, 220, 238);
+        display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      font-size: 18px;
+      border-radius: 10px;
+      opacity: 0.8;
+      font-weight: 800;
+      color: rgb(243, 127, 33);
+    }
+    .small label{
+        margin-top: 10px;
+    }
+    .small button{
+        margin-top:10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    input[type="number"] {
+      padding: 5px;
+      width: 150px;
+    }
+    
+    select {
+      padding: 5px;
+      width: 160px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    
+    #result {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="con">
+    <div class="small">
+  <h1>Temperature Converter</h1>
+  
+  <label for="temperature">Temperature:</label>
+  <input type="number" id="temperature" required>
+  
+  <label for="sourceUnit">Source Unit:</label>
+  <select id="sourceUnit">
+    <option value="celsius">Celsius</option>
+    <option value="fahrenheit">Fahrenheit</option>
+    <option value="kelvin">Kelvin</option>
+  </select>
+  
+  <label for="targetUnit">Target Unit:</label>
+  <select id="targetUnit">
+    <option value="celsius">Celsius</option>
+    <option value="fahrenheit">Fahrenheit</option>
+    <option value="kelvin">Kelvin</option>
+  </select>
+  
+  <button onclick="convertTemperature()">Convert</button>
+  
+  <div id="result"></div>
+</div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
